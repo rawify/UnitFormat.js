@@ -39,6 +39,7 @@
         "test": "mocha tests/*.js"
     },
     "dependencies": {
-        "chai": "*"
+        "chai": "*",
+        "mocha": "*"
     }
 }
