@@ -1,0 +1,44 @@
+{
+    "name": "unitformat",
+    "title": "Unit Formatter",
+    "version": "1.0.0",
+    "homepage": "https://github.com/infusion/UnitFormat.js",
+    "bugs": "https://github.com/infusion/UnitFormat.js/issues",
+    "description": "A simple and flexible unit formatter",
+    "keywords": [
+        "number",
+        "unit",
+        "format",
+        "formatter",
+        "human readable",
+        "cm",
+        "m",
+        "km",
+        "kb",
+        "mb",
+        "gb",
+        "g",
+        "kg"
+    ],
+    "author": "Robert Eisele <robert@xarg.org> (http://www.xarg.org/)",
+    "main": "unitformat.js",
+    "private": false,
+    "readmeFilename": "README.md",
+    "directories": {
+        "test": "tests"
+    },
+    "license": "MIT OR GPL-2.0",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/infusion/UnitFormat.js.git"
+    },
+    "engines": {
+        "node": "*"
+    },
+    "scripts": {
+        "test": "mocha tests/*.js"
+    },
+    "dependencies": {
+        "chai": "*"
+    }
+}
