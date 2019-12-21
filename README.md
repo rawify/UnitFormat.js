@@ -1,7 +1,7 @@
 # UnitFormat.js
 
 [![NPM Package](https://img.shields.io/npm/v/unitformat.svg?style=flat)](https://npmjs.org/package/unitformat "View this project on npm")
-[![Build Status](https://travis-ci.org/infusion/UnitFormat.js.svg?branch=master)](https://travis-ci.org/infusion/GPS.js)
+[![Build Status](https://travis-ci.org/infusion/UnitFormat.js.svg?branch=master)](https://travis-ci.org/infusion/UnitFormat.js)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
 UnitFormat.js is a number formatter for human readable unit numbers, like 10km, 5GB, 17kHz, 220MW, ... with known metric prefixes.
