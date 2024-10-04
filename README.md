@@ -1,13 +1,12 @@
 # UnitFormat.js
 
 [![NPM Package](https://img.shields.io/npm/v/unitformat.svg?style=flat)](https://npmjs.org/package/unitformat "View this project on npm")
-[![Build Status](https://travis-ci.org/infusion/UnitFormat.js.svg?branch=master)](https://travis-ci.org/infusion/UnitFormat.js)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
-UnitFormat.js is a number formatter for human readable unit numbers, like 10km, 5GB, 17kHz, 220MW, ... with known metric prefixes.
+UnitFormat.js is a number formatter for human readable unit numbers, like 10km, 5GB, 17kHz, 220MW, ... with known metric suffixes.
 
-Usage
-===
+## Usage
+
 
 The interface of UnitFormat.js is a single function that basically takes the number to be formatted and optionally the base unit, like "m" for meters:
 
@@ -18,8 +17,8 @@ let c = unitFormat(1000) // 1k
 let d = unitFormat(0.02, "m") // 2cm 
 ```
 
-Installation
-===
+## Installation
+
 Installing UnitFormat.js is as easy as cloning this repo or use the following command:
 
 ```
@@ -27,24 +26,24 @@ npm install unitformat
 ```
 
 
-Available Parameters
-===
+## Available Parameters
 
-The whole package consists of a single function `unitFormat` with the following signature
+
+The whole package consists of a single function `UnitFormat` with the following signature
 
 ```js
-unitFormat(num, baseUnit="", prefixes="kMGTPE", base=10)
+UnitFormat(num, baseUnit="", prefixes="kMGTPE", base=10)
 ```
 
 - *num*: the number to be formatted
 - *baseUnit*: the base unit, like meters, Hertz, Joule, ...
-- *prefixes*: which prefixes should be used
+- *suffix*: which suffixes should be used
 - *base*: The number base, default is 10, but 2 is also possible for bytes
 
-Prefixes
-===
+## Suffixes
 
-The prefix parameter is a string list of single-character metric prefixes, like `kMGTPE`. For base 10 the following prefixes can be used:
+
+The suffix parameter is a string list of single-character metric prefixes, like `kMGTPE`. For base 10 the following prefixes can be used:
 
 - `E`: Exa
 - `P`: Peta
@@ -72,26 +71,39 @@ And for base 2 the following prefixes are possible:
 - `E`: Exa
 
 
-Using UnitFormat.js with the browser
-===
+## Using UnitFormat.js with the browser
 
 
 ```html
-<script src="unitformat.js"></script>
+<script src="unitformat.min.js"></script>
 <script>
-  var x = unitFormat(100);
+  var x = UnitFormat(10000);
 </script>
 ```
 
-Testing
-===
-If you plan to enhance the library, make sure you add test cases and all the previous tests are passing. You can test the library with
+
+## Coding Style
+
+As every library I publish, UnitFormat.js is also built to be as small as possible after compressing it with Google Closure Compiler in advanced mode. Thus the coding style orientates a little on maxing-out the compression rate. Please make sure you keep this style if you plan to extend the library.
+
+## Building the library
+
+After cloning the Git repository run:
 
 ```
-npm test
+npm install
+npm run build
 ```
 
-Copyright and licensing
-===
-Copyright (c) 2016, [Robert Eisele](https://www.xarg.org/)
-Dual licensed under the MIT or GPL Version 2 licenses.
+## Run a test
+
+Testing the source against the shipped test suite is as easy as
+
+```
+npm run test
+```
+
+## Copyright and licensing
+
+Copyright (c) 2025, [Robert Eisele](https://raw.org/)
+Licensed under the MIT license.

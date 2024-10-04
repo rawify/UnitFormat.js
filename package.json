@@ -1,9 +1,9 @@
 {
     "name": "unitformat",
     "title": "Unit Formatter",
-    "version": "1.0.1",
-    "homepage": "https://github.com/infusion/UnitFormat.js",
-    "bugs": "https://github.com/infusion/UnitFormat.js/issues",
+    "version": "1.1.0",
+    "homepage": "https://github.com/rawify/UnitFormat.js",
+    "bugs": "https://github.com/rawify/UnitFormat.js/issues",
     "description": "A simple and flexible unit formatter",
     "keywords": [
         "number",
@@ -20,26 +20,46 @@
         "g",
         "kg"
     ],
-    "author": "Robert Eisele <robert@xarg.org> (http://www.xarg.org/)",
-    "main": "unitformat.js",
     "private": false,
+    "main": "./dist/unitformat.js",
+    "module": "./dist/unitformat.mjs",
+    "types": "./unitformat.d.ts",
+    "browser": "./dist/unitformat.min.js",
+    "unpkg": "./dist/unitformat.min.js",
     "readmeFilename": "README.md",
-    "directories": {
-        "test": "tests"
+    "exports": {
+        ".": {
+            "types": "./unitformat.d.ts",
+            "require": "./dist/unitformat.js",
+            "import": "./dist/unitformat.mjs"
+        }
     },
-    "license": "MIT OR GPL-2.0",
     "repository": {
         "type": "git",
-        "url": "git://github.com/infusion/UnitFormat.js.git"
+        "url": "git@github.com:rawify/UnitFormat.js.git"
     },
+    "funding": {
+        "type": "github",
+        "url": "https://github.com/sponsors/rawify"
+    },
+    "author": {
+        "name": "Robert Eisele",
+        "email": "robert@raw.org",
+        "url": "https://raw.org/"
+    },
+    "license": "MIT",
     "engines": {
         "node": "*"
     },
+    "directories": {
+        "test": "tests"
+    },
     "scripts": {
+        "build": "crude-build UnitFormat",
         "test": "mocha tests/*.js"
     },
-    "dependencies": {
-        "chai": "*",
+    "devDependencies": {
+        "crude-build": "^0.0.1",
         "mocha": "*"
     }
 }

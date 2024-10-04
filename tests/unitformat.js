@@ -1,8 +1,8 @@
 
-var expect = require('chai').expect;
-var unitFormat = require('../unitformat.js');
+const unitFormat = require('unitformat');
+const assert = require('assert');
 
-var tests = [{
+const tests = [{
   param: [0.15, "m", "cm"],
   res: "15cm"
 }, {
@@ -32,7 +32,7 @@ var tests = [{
 }, {
   param: [1000],
   res: "1k"
-},{
+}, {
   param: [5e-6, "g", "μm"],
   res: "5μg"
 }];
@@ -41,7 +41,7 @@ describe('Unit Format', function () {
 
   tests.forEach(test => {
     it('should pass ' + test.param[0] + test.param[1], function () {
-      expect(unitFormat.apply(null, test.param)).to.equal(test.res);
+      assert.equal(unitFormat.apply(null, test.param), test.res);
     });
   });
 });
