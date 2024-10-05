@@ -1,5 +1,5 @@
 /**
- * @license Unit Formatter v1.1.0 10/4/2024
+ * @license Unit Formatter v1.1.1 10/5/2024
  * https://github.com/rawify/UnitFormat.js
  *
  * Copyright (c) 2024, Robert Eisele (https://raw.org/)

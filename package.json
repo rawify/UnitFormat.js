@@ -1,7 +1,7 @@
 {
     "name": "unitformat",
     "title": "Unit Formatter",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "homepage": "https://github.com/rawify/UnitFormat.js",
     "bugs": "https://github.com/rawify/UnitFormat.js/issues",
     "description": "A simple and flexible unit formatter",
@@ -59,7 +59,7 @@
         "test": "mocha tests/*.js"
     },
     "devDependencies": {
-        "crude-build": "^0.0.1",
+        "crude-build": "^0.0.3",
         "mocha": "*"
     }
 }

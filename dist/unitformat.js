@@ -63,8 +63,7 @@ function UnitFormat(num, baseUnit, suffixes, base) {
   return Number(bestScore.toFixed(3)) + bestSuffix + baseUnit;
 }
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = UnitFormat;
-module.exports = UnitFormat; 
+Object.defineProperty(UnitFormat, "__esModule", { 'value': true });
+UnitFormat['default'] = UnitFormat;
+UnitFormat['UnitFormat'] = UnitFormat;
+module['exports'] = UnitFormat;
