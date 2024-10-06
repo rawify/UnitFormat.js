@@ -63,5 +63,5 @@ function UnitFormat(num, baseUnit, suffixes, base) {
   return Number(bestScore.toFixed(3)) + bestSuffix + baseUnit;
 }
 export {
-  UnitFormat as default
+  UnitFormat as default, UnitFormat
 };
