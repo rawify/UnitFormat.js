@@ -5,26 +5,58 @@
 
 UnitFormat.js is a number formatter for human readable unit numbers, like 10km, 5GB, 17kHz, 220MW, ... with known metric suffixes.
 
+## Installation
+
+You can install `UnitFormat.js` via npm:
+
+```bash
+npm install unitformat
+```
+
+Or with yarn:
+
+```bash
+yarn add unitformat
+```
+
+Alternatively, download or clone the repository:
+
+```bash
+git clone https://github.com/rawify/UnitFormat.js
+```
+
 ## Usage
+
+Include the `unitformat.min.js` file in your project:
+
+```html
+<script src="path/to/unitformat.min.js"></script>
+<script>
+  var x = UnitFormat(10000);
+</script>
+```
+
+Or in a Node.js project:
+
+```javascript
+const unitFormat = require('unitformat');
+```
+
+or
+
+```javascript
+import unitFormat from 'unitformat';
+```
 
 
 The interface of UnitFormat.js is a single function that basically takes the number to be formatted and optionally the base unit, like "m" for meters:
 
 ```javascript
-let a = unitFormat(1000, "m") // 1km
-let b = unitFormat(20000, "Hz") // 20kHz
-let c = unitFormat(1000) // 1k
-let d = unitFormat(0.02, "m") // 2cm 
+let a = UnitFormat(1000, "m") // 1km
+let b = UnitFormat(20000, "Hz") // 20kHz
+let c = UnitFormat(1000) // 1k
+let d = UnitFormat(0.02, "m") // 2cm
 ```
-
-## Installation
-
-Installing UnitFormat.js is as easy as cloning this repo or use the following command:
-
-```
-npm install unitformat
-```
-
 
 ## Available Parameters
 
@@ -69,17 +101,6 @@ And for base 2 the following prefixes are possible:
 - `T`: Tera
 - `P`: Peta
 - `E`: Exa
-
-
-## Using UnitFormat.js with the browser
-
-
-```html
-<script src="unitformat.min.js"></script>
-<script>
-  var x = UnitFormat(10000);
-</script>
-```
 
 
 ## Coding Style

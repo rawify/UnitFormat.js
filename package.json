@@ -4,7 +4,7 @@
     "version": "1.1.3",
     "homepage": "https://github.com/rawify/UnitFormat.js",
     "bugs": "https://github.com/rawify/UnitFormat.js/issues",
-    "description": "A simple and flexible unit formatter",
+    "description": "The RAW simple and flexible unit formatter",
     "keywords": [
         "number",
         "unit",
