@@ -1,10 +1,10 @@
 {
     "name": "unitformat",
     "title": "Unit Formatter",
-    "version": "1.1.4",
+    "version": "1.1.5",
+    "description": "The RAW simple and flexible unit formatter",
     "homepage": "https://github.com/rawify/UnitFormat.js",
     "bugs": "https://github.com/rawify/UnitFormat.js/issues",
-    "description": "The RAW simple and flexible unit formatter",
     "keywords": [
         "number",
         "unit",
@@ -23,17 +23,38 @@
     "private": false,
     "main": "./dist/unitformat.js",
     "module": "./dist/unitformat.mjs",
-    "types": "./unitformat.d.ts",
     "browser": "./dist/unitformat.min.js",
     "unpkg": "./dist/unitformat.min.js",
-    "readmeFilename": "README.md",
+    "types": "./unitformat.d.ts",
     "exports": {
-        ".": {
-            "types": "./unitformat.d.ts",
-            "require": "./dist/unitformat.js",
-            "import": "./dist/unitformat.mjs"
+      ".": {
+        "import": {
+          "types": "./unitformat.d.mts",
+          "default": "./dist/unitformat.mjs"
+        },
+        "require": {
+          "types": "./unitformat.d.ts",
+          "default": "./dist/unitformat.js"
+        },
+        "browser": {
+          "types": "./unitformat.d.ts",
+          "default": "./dist/unitformat.min.js"
+        },
+        "default": {
+          "types": "./unitformat.d.ts",
+          "default": "./dist/unitformat.js"
         }
+      },
+      "./package.json": "./package.json"
     },
+    "typesVersions": {
+      "<4.7": {
+        "*": [
+          "unitformat.d.ts"
+        ]
+      }
+    },
+    "sideEffects": false,
     "repository": {
         "type": "git",
         "url": "git@github.com:rawify/UnitFormat.js.git"
